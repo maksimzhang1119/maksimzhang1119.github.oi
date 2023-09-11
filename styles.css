@@ -1,0 +1,262 @@
+@media screen and (max-width: 850px) {
+    /* 移动设备上的样式 */
+    h1, h2, h3, p {
+        font-size: 99%; /* 设置默认字体大小 */
+    }
+    
+    #menu-button {
+        display: block;
+    }
+
+    /* 隐藏按钮之外的内容 */
+    nav > *:not(#menu-button) {
+        display: none;
+    }
+
+    /* 当菜单展开时，显示菜单项 */
+    #menu.expanded {
+        display: block;
+    }
+
+    #menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95); /* 半透明白色背景 */
+        overflow-y: auto; /* 允许滚动 */
+    }
+
+    /* 调整菜单项样式 */
+
+    #menu li {
+        list-style: none;
+        padding: 6px;
+        text-align: center;
+        display: block; /* 使用块级元素，每个菜单项都在单独的一行上 */
+    }
+
+    #menu a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .block {
+        width: 100%;
+        height: auto; /* 在手机版上，每个block元素都占满一行 */
+    }
+
+    #part3 {
+        flex-wrap: wrap;
+    }
+}
+
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 设置body占满整个视口高度 */
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.849) 50%, rgba(239, 247, 247, 0.829) 50%); /* 使用线性渐变背景 */
+    background-size: 100% 80em;
+}
+
+header {
+    background-image: url();
+    display: flex;
+    padding-left: 10%;
+    text-align: center;
+    padding-right: 10%;
+    position: fixed;
+    width: 85%;
+    height: 15%;
+    background-color: rgb(230, 244, 245);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+    border-radius: 0px 0px 10px 10px; /* 添加圆角效果 */
+}
+
+main {
+    padding-top: 130px; /* 与header的高度相等，确保main不重叠在header上 */
+}
+
+/* 设置横线的样式 */
+.menu-underline {
+    height: 2px; /* 设置横线高度 */
+    width: 0; /* 初始宽度为0 */
+    background-color: #333; /* 设置横线颜色 */
+    transition: width 0.3s ease-in-out; /* 添加过渡效果 */
+}
+
+/* 当鼠标悬停在菜单项上时，横线的宽度变为100% */
+#menu li:hover .menu-underline {
+    width: 100%;
+}
+#menu a{
+
+    color: rgb(21, 65, 85);
+}
+
+.logo {
+    width: 10em;
+    height: auto;
+    margin-right: 50px;
+    display: flex;
+}
+
+.menu-button {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.2s ease-in-out;
+}
+
+.bar:nth-child(2) {
+    margin: 5px 0;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 2em;
+    margin-left: 2em;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.part {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10em;
+}
+
+.part img {
+    max-width: 100%; /* 图像的最大宽度为其容器的宽度 */
+}
+
+.part h1, .part h2, .part h3, .part p {
+    flex: 1; /* 让文本部分占据可用空间的一部分 */
+    padding: 2px; /* 可选：添加一些内边距以改善外观 */
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+}
+
+#card1 {
+    background-color: #f5f5f5;
+    min-height: 25em;
+    min-width: 20em;
+    width: auto;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(177, 177, 177, 0.808);
+}
+
+.blocks {
+    margin-top: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.block {
+    color: #f5f5f5;
+    background-color: rgba(16, 89, 138, 0.76);
+    width: 300px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0px 2px 5px rgba(172, 172, 172, 0.5);
+}
+
+.block:hover {
+    background-color: #943737cb;
+}
+
+footer {
+    background-color: #e4ecf0;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer div {
+    margin-left: auto;
+    text-align: left;
+}
+#mp{
+    max-height: 18em;
+    margin-left: auto;
+}
+#logo2{
+    margin-right: auto;
+}
+#select{
+    height: 3em;
+    font-size: 2em;
+}
+#bt{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+button{
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 10px 10px;
+    color: #e4ecf0;
+    background-color: rgb(70, 138, 170);
+    width: 100%;
+}
+a{
+
+    width: 100%;
+}
+button:hover {
+    cursor: pointer;
+}
