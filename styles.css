@@ -1,15 +1,20 @@
 @media screen and (max-width: 850px) {
+
     /* 移动设备上的样式 */
-    h1, h2, h3, p {
-        font-size: 99%; /* 设置默认字体大小 */
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: 99%;
+        /* 设置默认字体大小 */
     }
-    
+
     #menu-button {
         display: block;
     }
 
     /* 隐藏按钮之外的内容 */
-    nav > *:not(#menu-button) {
+    nav>*:not(#menu-button) {
         display: none;
     }
 
@@ -25,8 +30,10 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.95); /* 半透明白色背景 */
-        overflow-y: auto; /* 允许滚动 */
+        background-color: rgba(255, 255, 255, 0.95);
+        /* 半透明白色背景 */
+        overflow-y: auto;
+        /* 允许滚动 */
     }
 
     /* 调整菜单项样式 */
@@ -35,7 +42,8 @@
         list-style: none;
         padding: 6px;
         text-align: center;
-        display: block; /* 使用块级元素，每个菜单项都在单独的一行上 */
+        display: block;
+        /* 使用块级元素，每个菜单项都在单独的一行上 */
     }
 
     #menu a {
@@ -48,7 +56,8 @@
 
     .block {
         width: 100%;
-        height: auto; /* 在手机版上，每个block元素都占满一行 */
+        height: auto;
+        /* 在手机版上，每个block元素都占满一行 */
     }
 
     #part3 {
@@ -60,8 +69,10 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; /* 设置body占满整个视口高度 */
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.849) 50%, rgba(239, 247, 247, 0.829) 50%); /* 使用线性渐变背景 */
+    height: 100vh;
+    /* 设置body占满整个视口高度 */
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.849) 50%, rgba(239, 247, 247, 0.829) 50%);
+    /* 使用线性渐变背景 */
     background-size: 100% 80em;
 }
 
@@ -75,27 +86,35 @@ header {
     width: 85%;
     height: 15%;
     background-color: rgb(230, 244, 245);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
-    border-radius: 0px 0px 10px 10px; /* 添加圆角效果 */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    /* 添加阴影效果 */
+    border-radius: 0px 0px 10px 10px;
+    /* 添加圆角效果 */
 }
 
 main {
-    padding-top: 130px; /* 与header的高度相等，确保main不重叠在header上 */
+    padding-top: 130px;
+    /* 与header的高度相等，确保main不重叠在header上 */
 }
 
 /* 设置横线的样式 */
 .menu-underline {
-    height: 2px; /* 设置横线高度 */
-    width: 0; /* 初始宽度为0 */
-    background-color: #333; /* 设置横线颜色 */
-    transition: width 0.3s ease-in-out; /* 添加过渡效果 */
+    height: 2px;
+    /* 设置横线高度 */
+    width: 0;
+    /* 初始宽度为0 */
+    background-color: #333;
+    /* 设置横线颜色 */
+    transition: width 0.3s ease-in-out;
+    /* 添加过渡效果 */
 }
 
 /* 当鼠标悬停在菜单项上时，横线的宽度变为100% */
 #menu li:hover .menu-underline {
     width: 100%;
 }
-#menu a{
+
+#menu a {
 
     color: rgb(21, 65, 85);
 }
@@ -161,12 +180,18 @@ nav a {
 }
 
 .part img {
-    max-width: 100%; /* 图像的最大宽度为其容器的宽度 */
+    max-width: 100%;
+    /* 图像的最大宽度为其容器的宽度 */
 }
 
-.part h1, .part h2, .part h3, .part p {
-    flex: 1; /* 让文本部分占据可用空间的一部分 */
-    padding: 2px; /* 可选：添加一些内边距以改善外观 */
+.part h1,
+.part h2,
+.part h3,
+.part p {
+    flex: 1;
+    /* 让文本部分占据可用空间的一部分 */
+    padding: 2px;
+    /* 可选：添加一些内边距以改善外观 */
 }
 
 .cards {
@@ -229,34 +254,53 @@ footer div {
     margin-left: auto;
     text-align: left;
 }
-#mp{
+
+#mp {
     max-height: 10em;
     margin-left: auto;
 }
-#logo2{
+
+#logo2 {
     margin-right: auto;
 }
-#select{
+
+#select {
     height: 3em;
     font-size: 2em;
 }
-#bt{
+
+#bt {
 
     width: 100%;
     display: flex;
     align-items: center;
 }
-button{
+
+button {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
     border-radius: 0px 0px 10px 10px;
     color: #e4ecf0;
     background-color: rgb(70, 138, 170);
     width: 100%;
 }
-a{
+
+a {
 
     width: 100%;
 }
+
 button:hover {
     cursor: pointer;
+}
+
+/* 初始图片样式 */
+.zoom {
+    transition: transform 0.3s;
+    /* 添加平滑过渡效果 */
+}
+
+/* 鼠标指向时放大图片 */
+.zoom:hover {
+    transform: scale(2);
+    /* 图片放大 20% */
 }
